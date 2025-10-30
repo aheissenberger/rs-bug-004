@@ -1,8 +1,14 @@
 import "~/global.css";
 
+import { Link } from "@lazarv/react-server/navigation";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "~/components/ui/dropdown-menu";
 import Confetti from "~/Confetti";
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
-import { Menu, Link } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function App() {
   return (
@@ -12,9 +18,6 @@ export default function App() {
         className="w-full min-h-full flex flex-col justify-center items-center dark:bg-zinc-900 dark:text-gray-400"
         suppressHydrationWarning
       >
-
-
-
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <button
@@ -39,8 +42,6 @@ export default function App() {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-
-
 
         <a
           href="https://github.com/lazarv/react-server"
