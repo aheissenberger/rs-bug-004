@@ -1,7 +1,8 @@
 import "~/global.css";
 
 import Confetti from "~/Confetti";
-import Header from "./components/header";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
+import { Menu, Link } from "lucide-react";
 
 export default function App() {
   return (
@@ -11,7 +12,36 @@ export default function App() {
         className="w-full min-h-full flex flex-col justify-center items-center dark:bg-zinc-900 dark:text-gray-400"
         suppressHydrationWarning
       >
-        <Header />
+
+
+
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <button
+              className="p-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:outline-none"
+              aria-label="Open menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem asChild>
+              <Link to="/p1">Menu Item 1</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/p2">Menu Item 2</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/p3">Menu Item 3</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/auth/login">Login</Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+
+
         <a
           href="https://github.com/lazarv/react-server"
           target="_blank"
