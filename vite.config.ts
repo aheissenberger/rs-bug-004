@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  resolve: { alias: { "~/": "/src/" } },
+  resolve: { alias: { "~/": "/src/", "@": "/src/" } },
 });

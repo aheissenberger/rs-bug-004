@@ -1,6 +1,7 @@
 import "~/global.css";
 
 import Confetti from "~/Confetti";
+import Header from "./components/header";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         className="w-full min-h-full flex flex-col justify-center items-center dark:bg-zinc-900 dark:text-gray-400"
         suppressHydrationWarning
       >
+        <Header />
         <a
           href="https://github.com/lazarv/react-server"
           target="_blank"
